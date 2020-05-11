@@ -12,11 +12,11 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 #static route
-@app.route("/")
+@app.route('/' , methods=['GET' , 'POST']) 
 def homepage1006():
     return render_template("index.html")
 
-@app.route("/1006")
+@app.route("/assignments")
 def assignments():
     return render_template("1006.html")
 
